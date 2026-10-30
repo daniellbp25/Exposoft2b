@@ -1,0 +1,496 @@
+* {
+  padding: 0%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+
+  margin: 0%;
+  padding: 0%;
+  min-height: 100vh;
+  height: 2700px;
+  width: 100%;
+  background-image: linear-gradient(125deg, #08da8d 15%, #008F73);
+  background-attachment: fixed;
+  font-family: jost;
+  position: absolute;
+
+  /* Outros estilos para o body, como cor de texto, fonte, etc. */
+  /* Estilos para outros elementos na página, como divs, headings, etc. */
+}
+
+.header {
+  background-color: rgb(0, 0, 0);
+  padding: 15px;
+  display: flex;
+  /*flex: ele alinha as coisas laterais. 
+          todos filhos da tag header se torna flex. dessa forma, 
+          pode-se mover os itens para o centro.
+          header: pai. 
+          filhos: img e nav(itens flex)*/
+  color: rgb(0, 134, 251);
+  justify-content: space-between;
+  /*espaçamento entre o conteudo*/
+  align-items: center;
+  /*alinhou ao centro do menu*/
+  box-shadow: 0px 30px 100px 50px rgb(0, 0, 0);
+  position: relative;
+  z-index: 1;
+  animation: desce 2s;
+}
+
+@keyframes desce {
+  0% {
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes slaid {
+  0% {
+    transform: translateY(-100%);
+  }
+}
+
+
+
+
+.slide {
+  position: relative;
+  height: 250px;
+  display: flex;
+  /* outra forma de centralizar */
+  justify-content: center;
+  /* outra forma de centralizar */
+  align-items: center;
+  /* outra forma de centralizar */
+  animation: slaid 2s;
+
+}
+
+.slide,
+.black {
+  width: auto;
+}
+
+#Foi {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* para ajustar a imagem à div .slide evitando 
+      que estique a imagem em dispositivos maiores*/
+  box-shadow: 0px -20px 10px 1px black;
+  filter: blur(2px);
+}
+
+h1 {
+  text-align: center;
+  font-size: 80px;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  top: 50%;
+  /* outra forma de centralizar */
+  left: 50%;
+  /* outra forma de centralizar */
+  transform: translate(-50%, -50%);
+  /* outra forma de centralizar */
+  margin: 0;
+  /* remova margens padrão */
+  padding: 0;
+  /* remover o preenchimento padrão */
+  z-index: 3;
+}
+
+
+
+
+.brasao {
+  width: 90px;
+}
+
+.home {
+  width: 50px;
+}
+
+.menu li {
+  display: inline;
+  margin: 10px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.menu {
+  position: relative;
+}
+
+.menu ul {
+  text-align: center;
+  padding: 0%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+
+.login {
+  width: 50px;
+  transition: 0.2s;
+}
+
+.login:hover {
+
+  transform: scale(1.2);
+
+}
+
+.menu li a {
+  /*escrita*/
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-family: jost;
+  font-size: 20px;
+  transition: 0.4s;
+}
+
+.menu li a:hover {
+  color: rgb(52, 96, 34);
+}
+
+@media(max-width: 406px) {
+
+  /*cria condição adapta tamanho*/
+  .header {
+    background-color: rgb(0, 0, 0);
+    padding: 15px;
+    color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 20px 100px 20px rgba(0, 0, 0, 0.331);
+  }
+
+  .arvore {
+    width: 100px;
+    position: relative;
+    left: 0;
+
+  }
+
+  .menu li a {
+    font-size: 20px;
+    color: white;
+  }
+
+  .brasao {
+    margin: 5%;
+    width: 70px;
+  }
+
+  .black {
+    height: 100%;
+    margin: 0%;
+    padding: 0%;
+    position: relative;
+    width: auto;
+    background: linear-gradient(rgb(260, 115, 77), rgb(126, 8, 105));
+    /*rgb(260.3, 115.5, 77), rgb(126.3, 8, 105);*/
+    box-shadow: 0px 10px 50px 20px rgba(0, 0, 0, 0.483);
+  }
+
+  .black-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+
+  }
+
+
+
+}
+
+.black {
+  height: 500px;
+  margin: 0%;
+  padding: 0%;
+  position: relative;
+  width: auto;
+  background: linear-gradient(rgb(260, 115, 77), rgb(126, 8, 105));
+  /*rgb(260.3, 115.5, 77), rgb(126.3, 8, 105);*/
+  box-shadow: 0px -70px 50px 10px rgba(0, 0, 0, 0.753);
+}
+
+.arvore {
+  width: 500px;
+  position: relative;
+  left: 0;
+  margin-left: 50px;
+  box-shadow: 1px 1px 10px 2px;
+}
+
+.txt {
+  margin: 50px;
+  padding: 0%;
+  font-size: 30px;
+  color: white;
+  font-family: jost;
+
+}
+
+.container {
+  position: relative;
+  bottom: 0%;
+  height: auto;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  margin: 0%;
+  background-image: url(../img/terra.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  font-family: jost;
+}
+
+.column {
+  width: 400px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.column-image {
+  width: 400px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+@media (max-width: 768px) {
+  .verticontain {
+
+    height: auto;
+    background: linear-gradient(190deg, rgb(57, 161, 57), rgb(38, 235, 152));
+    animation: pao 2s;
+    padding: 25px;
+    padding-left: 150px;
+    padding-right: 150px;
+    margin: 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ilust {
+    width: 50px;
+    border-right: solid 5px rgb(7, 170, 88);
+    border-radius: 0px 50px 0px 50px;
+    z-index: 5;
+    margin-bottom: 50px;
+    height: 30px;
+  }
+
+}
+
+.verticontain {
+
+  height: auto;
+  background: linear-gradient(190deg, rgb(57, 161, 57), rgb(38, 235, 152));
+  animation: pao 2s;
+  padding: 25px;
+  padding-left: 150px;
+  padding-right: 150px;
+  margin: 0%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.part-1 {
+
+  display: flex;
+  justify-content: space-between;
+  max-width: 1500px;
+
+}
+
+.part-2 {
+
+  max-height: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.titulo {
+  text-align: left;
+  font-size: 40px;
+  margin-left: 25px;
+  color: yellow;
+}
+
+h2 {
+  text-align: center;
+  font-size: 40px;
+  margin-left: 25px;
+  color: rgb(255, 255, 255);
+}
+
+.ilust {
+  width: 500px;
+  border-right: solid 5px rgb(7, 170, 88);
+  border-radius: 0px 50px 0px 50px;
+  z-index: 5;
+  margin-bottom: 50px;
+  height: 300px;
+}
+
+#title {
+  position: relative;
+}
+
+
+
+
+#textinho {
+  text-align: left;
+}
+
+@keyframes pao {
+  0% {
+    transform: translateY(50%);
+
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+
+
+
+
+p {
+  text-align: left;
+  font-size: 20px;
+  margin-left: 25px;
+  color: white;
+}
+
+
+
+
+details,
+summary {
+  transition: margin-bottom 350ms ease-in-out;
+
+}
+
+details[open] summary {
+  margin-bottom: 50px;
+
+}
+
+
+
+
+details[open] {
+  margin-bottom: 50px;
+}
+
+summary {
+  font-size: 40px;
+  cursor: pointer;
+  margin: 20px;
+  width: 100%;
+
+}
+
+
+.plant {
+  width: 650px;
+  float: left;
+  margin-right: 25px;
+  border-right: solid 5px rgb(7, 170, 88);
+  border-radius: 0px 50px 0px 50px;
+  z-index: 5;
+}
+
+details {
+  width: 100%;
+
+}
+
+.Loren {
+
+  display: inline-block;
+
+}
+
+@media (max-width: 755px) {
+  .slide h1 {
+    font-size: 60px;
+  }
+
+  .verticontain {
+    width: 100%;
+    padding: 6px 12px;
+  }
+
+  .tudo {
+    width: 80%;
+    margin-top: 12px;
+  }
+
+  .part-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .conteudo h2 {
+    margin: 12px 0;
+  }
+
+  .ilustre {
+    width: 100% !important;
+    height: auto;
+  }
+
+  .ilustre img {
+    width: 100%;
+    height: auto;
+  }
+
+  .ilust {
+    margin: 0;
+  }
+
+  .part-1 {
+    margin-bottom: 20px;
+  }
+
+  .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .container .column {
+    width: 100% !important;
+  }
+
+  .column-image{
+    width: 100%;
+  }
+}

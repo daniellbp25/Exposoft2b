@@ -1,0 +1,176 @@
+/* gradiente, attachment para preencher todo gradiente(esticar), fonte, overflow para o tamanho dos elementos não interferirem em relação o tamanho do monitor*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(125deg, #08da8d 15%, #008F73);
+    background-attachment: fixed;
+    font-family: jost;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.sopa.sopa.paos {
+    opacity: 0%;
+
+}
+
+/*display flex para organizar os itens de header os elementos dentro, z-index para header sobrepor*/
+header {
+    display: flex;
+    flex-direction: row;
+    /*transforma em fluxo de linha*/
+    justify-content: right;
+    /*espaço entre eles. around: espeço neles*/
+    align-items: center;
+    z-index: 2;
+    flex-wrap: nowrap;
+}
+
+button {
+    /* position: absolute; */
+    /**/
+    right: 50%;
+    z-index: 2;
+    border: none;
+    width: 150px;
+    height: 50px;
+    border-radius: 20px 20px 20px 20px;
+    background-color: #0b9439;
+    font-family: jost;
+    font-size: 20px;
+    color: beige;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background-color: #065f24;
+}
+
+/*Titulo: Jardinagem*/
+h1 {
+    font-size: 70px;
+    margin-left: 1%;
+}
+
+/**/
+main {
+    display: flex;
+}
+
+ul {
+    margin-top: 3px;
+    padding: 0%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+ul a{
+    color: inherit;
+    transition: transform .2s ease-in-out;
+}
+
+li{
+    margin: 0;
+    padding: 0 3px;
+}
+
+a li:hover{
+    transform: translateY(-3px);
+    border: .5 solid #065f24;
+    border-radius: 16px;
+    background-color: #065f249c;
+    padding: 5px;
+    box-shadow: 2px 3px 1px #000;
+}
+
+/*img*/
+article {
+    position: relative;
+    bottom: 0%;
+    z-index: 1;
+    left: 0%;
+    width: 700px;
+    height: 667px;
+    animation: play 2s;
+}
+
+
+img {
+    position: relative;
+    bottom: 0%;
+    top: 0%;
+    left: 0%;
+    z-index: 0;
+    pointer-events: none;
+    animation: play 0.1s linear;
+}
+
+@keyframes play {
+    0% {
+        opacity: 0%;
+    }
+}
+
+aside {
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-left: 30px;
+    gap: 6px;
+    top: 48%;
+}
+
+h1 {
+    margin-bottom: 0%;
+    margin-top: 15px;
+    color: #008F73;
+}
+
+p {
+    margin-right: 40px;
+}
+
+/**/
+li {
+    display: inline-block;
+    margin: 20px;
+    margin-left: 40px;
+    font-size: 20px;
+    color: antiquewhite;
+    transition: 0.5s;
+
+    &:hover {
+        color: rgb(22, 103, 56);
+    }
+}
+
+@media (max-width: 755px) {
+    header {
+        justify-content: center;
+        margin: 0;
+    }
+
+    li{
+        margin: 0;
+        padding: 20px;
+    }
+
+    aside {
+        justify-content: flex-start;
+        top: 30%;
+    }
+
+    article h1,
+    p {
+        max-width: 400px;
+        padding: 8px;
+    }
+}
